@@ -42,7 +42,7 @@ function M.lsp(buf)
 		["n|gs"] = map_callback(function()
 			vim.lsp.buf.signature_help()
 		end):with_desc("lsp: Signature help"),
-		["n|gr"] = map_cr("Lspsaga rename"):with_silent():with_buffer(buf):with_desc("lsp: Rename in file range"),
+		["n|<leader>rn"] = map_cr("Lspsaga rename"):with_silent():with_buffer(buf):with_desc("lsp: Rename in file range"),
 		["n|gR"] = map_cr("Lspsaga rename ++project")
 			:with_silent()
 			:with_buffer(buf)
@@ -52,10 +52,10 @@ function M.lsp(buf)
 			:with_silent()
 			:with_buffer(buf)
 			:with_desc("lsp: Code action for cursor"),
-		["n|gd"] = map_cr("Glance definitions"):with_silent():with_buffer(buf):with_desc("lsp: Preview definition"),
-		["n|gD"] = map_cr("Lspsaga goto_definition"):with_silent():with_buffer(buf):with_desc("lsp: Goto definition"),
-		["n|gh"] = map_cr("Glance references"):with_silent():with_buffer(buf):with_desc("lsp: Show reference"),
-		["n|gm"] = map_cr("Glance implementations")
+		["n|gD"] = map_cr("Glance definitions"):with_silent():with_buffer(buf):with_desc("lsp: Preview definition"),
+		["n|gd"] = map_cr("Lspsaga goto_definition"):with_silent():with_buffer(buf):with_desc("lsp: Goto definition"),
+		["n|gr"] = map_cr("Glance references"):with_silent():with_buffer(buf):with_desc("lsp: Show reference"),
+		["n|gi"] = map_cr("Glance implementations")
 			:with_silent()
 			:with_buffer(buf)
 			:with_desc("lsp: Show implementation"),
