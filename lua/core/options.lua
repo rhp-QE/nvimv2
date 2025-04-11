@@ -21,7 +21,7 @@ local function load_options()
 		completeopt = "menuone,noselect,popup",
 		concealcursor = "niv",
 		conceallevel = 0,
-		cursorcolumn = true,
+		cursorcolumn = false,  -- 取消光标所在列高亮
 		cursorline = true,
 		diffopt = "filler,iwhite,internal,linematch:60,algorithm:patience",
 		display = "lastline",
@@ -54,7 +54,7 @@ local function load_options()
 		pumblend = 0,
 		pumheight = 15,
 		redrawtime = 1500,
-		relativenumber = true,
+		relativenumber = false,
 		ruler = true,
 		scrolloff = 2,
 		sessionoptions = "buffers,curdir,folds,help,tabpages,winpos,winsize",
