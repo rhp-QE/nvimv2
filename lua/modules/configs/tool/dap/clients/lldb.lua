@@ -3,14 +3,20 @@ return function()
 	local dap = require("dap")
 	local utils = require("modules.utils.dap")
 
-	dap.adapters.lldb = {
+	-- dap.adapters.lldb = {
+	-- 	type = "executable",
+	-- 	command = vim.fn.exepath("lldb-vscode"), -- Find lldb-vscode on $PATH
+	-- }
+
+	dap.adapters.gdb = {
 		type = "executable",
-		command = vim.fn.exepath("lldb-vscode"), -- Find lldb-vscode on $PATH
+		command = "gdb",
+		args = { "--interpreter=mi2" },  -- 使用 Machine Interface 2
 	}
 	dap.configurations.c = {
 		{
 			name = "Launch",
-			type = "lldb",
+			type = "gdb",
 			request = "launch",
 			program = utils.input_exec_path(),
 			cwd = "${workspaceFolder}",
