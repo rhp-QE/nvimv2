@@ -5,4 +5,18 @@ completion["github/copilot.vim"] = {
 	lazy = true,
 }
 
+completion["Mofiqul/vscode.nvim"] = {
+	lazy = false,
+	config = function()
+        require("vscode").setup({
+            style = "dark", 
+            transparent = true, -- 关闭透明模式
+            italic_comments = true, -- 注释斜体
+        })
+
+        -- 自定义背景色（可选覆盖）
+        -- vim.api.nvim_set_hl(0, "Normal", { bg = "#262626" })
+    end
+}
+
 return completion
