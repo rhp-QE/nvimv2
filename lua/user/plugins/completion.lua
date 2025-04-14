@@ -19,4 +19,15 @@ completion["Mofiqul/vscode.nvim"] = {
     end
 }
 
+completion["Pocco81/auto-save.nvim"] = {
+	lazy = false,
+	config = function()
+        require("auto-save").setup({
+            enable = true,
+            debounce_delay = 0,
+            trigger_events = { "TextChanged" }
+        })
+    end
+}
+
 return completion
