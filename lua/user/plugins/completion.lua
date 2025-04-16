@@ -10,7 +10,7 @@ completion["Mofiqul/vscode.nvim"] = {
 	config = function()
         require("vscode").setup({
             style = "dark", 
-            transparent = true, -- 关闭透明模式
+            --transparent = true, -- 关闭透明模式
             italic_comments = true, -- 注释斜体
         })
 

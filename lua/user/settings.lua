@@ -10,4 +10,6 @@ vim.keymap.set('i', 'jk', '<ESC>', { noremap = true, silent = true })
 -- 主题
 settings["colorscheme"] = "vscode"
 
+vim.g.neovide_transparency = 0.9  -- 设置窗口整体透明度
+
 return settings
