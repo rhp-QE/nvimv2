@@ -80,6 +80,13 @@ local mappings = {
 			:with_silent()
 			:with_desc("git: Toggle lazygit"),
 
+		["n|<leader>tt"] = map_callback(function()
+				_toggle_tmux()
+			end)
+			:with_noremap()
+			:with_silent()
+			:with_desc("Tmux: Toggle tmux"),
+
 		-- Plugin: trouble
 		["n|gt"] = map_cr("Trouble diagnostics toggle")
 			:with_noremap()

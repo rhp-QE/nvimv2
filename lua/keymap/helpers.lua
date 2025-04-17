@@ -84,3 +84,28 @@ _G._toggle_lazygit = function()
 		vim.notify("Command [lazygit] not found!", vim.log.levels.ERROR, { title = "toggleterm.nvim" })
 	end
 end
+
+local _tmux_term = nil
+_G._toggle_tmux = function()
+  if vim.fn.executable("tmux") == 1 then
+    if not _tmux_term then
+      _tmux_term = require("toggleterm.terminal").Terminal:new({
+        cmd = "tmux new-session -A -s nvim_tmux",  -- 复用名为 nvim_tmux 的会话
+        direction = "float",                       -- 浮动窗口
+        close_on_exit = false,                     -- 保持窗口（tmux 分离后不关闭）
+        hidden = true,                             -- 初始隐藏
+        float_opts = {
+          border = "curved",                      -- 边框样式
+          width = 200,
+          height = 40
+        },
+        on_open = function(term)
+          vim.cmd("startinsert!")                  -- 自动进入插入模式
+        end
+      })
+    end
+    _tmux_term:toggle()  -- 切换 tmux 终端
+  else
+    vim.notify("Command [tmux] not found!", vim.log.levels.ERROR, { title = "toggleterm.nvim" })
+  end
+end
