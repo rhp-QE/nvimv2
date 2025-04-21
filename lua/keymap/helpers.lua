@@ -94,11 +94,11 @@ _G._toggle_tmux = function()
         direction = "float",                       -- 浮动窗口
         close_on_exit = false,                     -- 保持窗口（tmux 分离后不关闭）
         hidden = true,                             -- 初始隐藏
-        float_opts = {
-          border = "curved",                      -- 边框样式
-          width = 200,
-          height = 40
-        },
+        -- float_opts = {
+        --   border = "curved",                      -- 边框样式
+        --   width = 200,
+        --   height = 40
+        -- },
         on_open = function(term)
           vim.cmd("startinsert!")                  -- 自动进入插入模式
         end

@@ -12,4 +12,6 @@ settings["colorscheme"] = "vscode"
 
 vim.g.neovide_transparency = 0.9  -- 设置窗口整体透明度
 
+vim.opt.autoread = true  -- 启用自动重新加载
+
 return settings
