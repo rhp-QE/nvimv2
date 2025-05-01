@@ -68,11 +68,11 @@ local mappings = {
 			:with_noremap()
 			:with_silent()
 			:with_desc("terminal: Toggle float"),
-		["i|<leader>to"] = map_cmd("<Esc><Cmd>ToggleTerm direction=float<CR>")
-			:with_noremap()
-			:with_silent()
-			:with_desc("terminal: Toggle float"),
-		["t|<leader>to"] = map_cmd("<Cmd>ToggleTerm<CR>"):with_noremap():with_silent():with_desc("terminal: Toggle float"),
+		-- ["i|<leader>to"] = map_cmd("<Esc><Cmd>ToggleTerm direction=float<CR>")
+		-- 	:with_noremap()
+		-- 	:with_silent()
+		-- 	:with_desc("terminal: Toggle float"),
+		-- ["t|<leader>to"] = map_cmd("<Cmd>ToggleTerm<CR>"):with_noremap():with_silent():with_desc("terminal: Toggle float"),
 		["n|<leader>gg"] = map_callback(function()
 				_toggle_lazygit()
 			end)

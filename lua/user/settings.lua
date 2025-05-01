@@ -10,7 +10,7 @@ vim.keymap.set('i', 'fd', '<ESC>', { noremap = true, silent = true })
 -- 主题
 settings["colorscheme"] = "vscode"
 
-vim.g.neovide_transparency = 0.9  -- 设置窗口整体透明度
+vim.g.neovide_transparency = 0.8  -- 设置窗口整体透明度
 
 vim.opt.autoread = true  -- 启用自动重新加载
 
