@@ -207,7 +207,9 @@ local data = {
 	},
 	dap = {
 		Breakpoint = "󰝥",
-		BreakpointCondition = "󰟃",
+		-- BreakpointCondition = "󰟃",
+		-- BreakpointCondition = "⭕",
+		BreakpointCondition = "󰝥",
 		BreakpointRejected = "",
 		LogPoint = "",
 		Pause = "",
@@ -217,7 +219,8 @@ local data = {
 		StepInto = "󰆹",
 		StepOut = "󰆸",
 		StepOver = "󰆷",
-		Stopped = "",
+		-- Stopped = "",green
+		Stopped = "➤",
 		Terminate = "󰝤",
 	},
 }

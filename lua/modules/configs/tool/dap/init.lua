@@ -26,7 +26,13 @@ return function()
 	dap.listeners.before.disconnect["dapui_config"] = debug_terminate_cb
 
 	-- We need to override nvim-dap's default highlight groups, AFTER requiring nvim-dap for catppuccin.
-	vim.api.nvim_set_hl(0, "DapStopped", { fg = colors.green })
+	-- 暂停调试行 
+	vim.api.nvim_set_hl(0, "DapStopped", { fg = "#7AED1D" }) 
+	vim.api.nvim_set_hl(0, "DapStoppedLine", { bg = "#474710" })
+
+	-- 断点 条件断点
+	vim.api.nvim_set_hl(0, "DapBreakpoint", { fg = "#FF0000" })
+	vim.api.nvim_set_hl(0, "DapBreakpointCondition", { fg = "#18ECEC" })
 
 	vim.fn.sign_define(
 		"DapBreakpoint",
@@ -34,9 +40,9 @@ return function()
 	)
 	vim.fn.sign_define(
 		"DapBreakpointCondition",
-		{ text = icons.dap.BreakpointCondition, texthl = "DapBreakpoint", linehl = "", numhl = "" }
+		{ text = icons.dap.BreakpointCondition, texthl = "DapBreakpointCondition", linehl = "", numhl = "" }
 	)
-	vim.fn.sign_define("DapStopped", { text = icons.dap.Stopped, texthl = "DapStopped", linehl = "", numhl = "" })
+	vim.fn.sign_define("DapStopped", { text = icons.dap.Stopped, texthl = "DapStopped", linehl = "DapStoppedLine", numhl = "" })
 	vim.fn.sign_define(
 		"DapBreakpointRejected",
 		{ text = icons.dap.BreakpointRejected, texthl = "DapBreakpoint", linehl = "", numhl = "" }
