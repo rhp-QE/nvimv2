@@ -163,7 +163,7 @@ local mappings = {
 			:with_noremap()
 			:with_silent()
 			:with_desc("debug: Run/Continue"),
-		["n|<F7>"] = map_callback(function()
+		["n|<leader>ds"] = map_callback(function()
 				require("dap").terminate()
 			end)
 			:with_noremap()
@@ -175,19 +175,19 @@ local mappings = {
 			:with_noremap()
 			:with_silent()
 			:with_desc("debug: Toggle breakpoint"),
-		["n|<leader>sin"] = map_callback(function()
+		["n|<leader>di"] = map_callback(function()
 				require("dap").step_into()
 			end)
 			:with_noremap()
 			:with_silent()
 			:with_desc("debug: Step into"),
-		["n|<leader>sout"] = map_callback(function()
+		["n|<leader>do"] = map_callback(function()
 				require("dap").step_out()
 			end)
 			:with_noremap()
 			:with_silent()
 			:with_desc("debug: Step out"),
-		["n|<leader>sover"] = map_callback(function()
+		["n|<leader>dn"] = map_callback(function()
 				require("dap").step_over()
 			end)
 			:with_noremap()
@@ -211,7 +211,7 @@ local mappings = {
 			:with_noremap()
 			:with_silent()
 			:with_desc("debug: Run last"),
-		["n|<leader>do"] = map_callback(function()
+		["n|<leader>dap"] = map_callback(function()
 				require("dap").repl.open()
 			end)
 			:with_noremap()
